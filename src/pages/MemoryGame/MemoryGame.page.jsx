@@ -73,29 +73,27 @@ const MemoryGame = () => {
     setCardsChosen((oldCardsChosen) => [...oldCardsChosen, cardArray[index]]);
   };
 
-  // const renderScore = () => {
-  //   return cardsWonId.length === cardArray.length ? (
-  //     <Score>Congratulations! You found them all!</Score>
-  //   )
-  // };
+  const Display = () => (
+    <WrapperDisplay>
+      <Score>
+        <h3>Score</h3> <span>{cardsWonId.length / 2}</span>
+      </Score>
+      <Title>
+        {cardsWonId.length === cardArray.length ? (
+          <h1>Congratulations! You found them all!</h1>
+        ) : (
+          <h1>Memory Game</h1>
+        )}
+      </Title>
+      <Attempts>
+        <h3>Attempts</h3> <span>{attempts}</span>
+      </Attempts>
+    </WrapperDisplay>
+  );
 
   return (
     <Container>
-      <WrapperDisplay>
-        <Score>
-          <h3>Score</h3> <span>{cardsWonId.length / 2}</span>
-        </Score>
-        <Title>
-          {cardsWonId.length === cardArray.length ? (
-            <h1>Congratulations! You found them all!</h1>
-          ) : (
-            <h1>Memory Game</h1>
-          )}
-        </Title>
-        <Attempts>
-          <h3>Attempts</h3> <span>{attempts}</span>
-        </Attempts>
-      </WrapperDisplay>
+      <Display />
       <Box>
         <ArrowA />
         <ArrowB />
