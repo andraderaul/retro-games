@@ -132,6 +132,10 @@ const display = styled.div`
       font-size: 20px;
     }
   }
+  @media (max-width: 540px) {
+    /* min-width: 5em;
+    min-height: 5em; */
+  }
 `;
 
 export const WrapperDisplay = styled.div`
@@ -164,7 +168,7 @@ export const Title = styled.div`
     text-align: center;
   }
   @media (max-width: 540px) {
-    font-size: 20px;
+    font-size: 15px;
   }
 `;
 
