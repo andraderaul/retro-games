@@ -22,6 +22,10 @@ export const Box = styled.div`
   -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
   box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+
+  @media (max-width: 1440px) {
+    width: 95%;
+  }
 `;
 export const button = styled.span`
   position: absolute;
@@ -116,7 +120,7 @@ const display = styled.div`
     font-size: 26px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 540px) {
     width: 5em;
     height: 5em;
     h3 {
@@ -159,7 +163,7 @@ export const Title = styled.div`
   h1 {
     text-align: center;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 540px) {
     font-size: 20px;
   }
 `;
@@ -173,5 +177,10 @@ export const Image = styled.img`
   border: 5px solid #fff;
   &:hover {
     transform: scale(1.1, 1.1);
+  }
+
+  @media (max-width: 540px) {
+    max-width: 50%;
+    margin: 0.5rem;
   }
 `;
