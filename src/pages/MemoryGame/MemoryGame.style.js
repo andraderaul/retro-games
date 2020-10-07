@@ -133,8 +133,8 @@ const display = styled.div`
     }
   }
   @media (max-width: 540px) {
-    /* min-width: 5em;
-    min-height: 5em; */
+    min-width: 5em;
+    min-height: 5em;
   }
 `;
 
