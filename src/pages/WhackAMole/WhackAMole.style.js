@@ -58,6 +58,12 @@ export const Square = styled.div`
     margin: 0.3em;
   }
 
+  @media (max-width: 375px) {
+    width: 86px;
+    height: 86px;
+    margin: 0.3em;
+  }
+
   ${({ mole }) =>
     mole &&
     css`
