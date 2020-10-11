@@ -55,3 +55,8 @@ export const cardArray = [
     img: hotdog,
   },
 ].sort(() => 0.5 - Math.random());
+
+export const displayNumber = (number) =>
+  number < 10 ? `0${number}` : `${number}`;
+
+export const positionsArray = Array.from(Array(9).keys());
