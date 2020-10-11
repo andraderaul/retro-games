@@ -1,13 +1,13 @@
 import React from "react";
 
-import MemoryGame from "./pages/MemoryGame";
 import GlobalStyle from "./helpers/styles/styles";
+import Routes from "./Routes";
 
 function App() {
   return (
     <div>
       <GlobalStyle />
-      <MemoryGame />
+      <Routes />
     </div>
   );
 }
