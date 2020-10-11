@@ -56,11 +56,7 @@ const MemoryGame = () => {
         <Image
           key={index}
           src={
-            cardsChosenId.includes(index)
-              ? data.img
-              : cardsWonId.includes(index)
-              ? white
-              : blank
+            cardsChosenId.includes(index) ? data.img : cardsWonId.includes(index) ? white : blank
           }
           onClick={cardsWonId.includes(index) ? null : () => flipCard(index)}
         />
