@@ -53,8 +53,8 @@ export const Square = styled.div`
   background-color: #e07a5f;
 
   @media (max-width: 540px) {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     margin: 0.3em;
   }
 
