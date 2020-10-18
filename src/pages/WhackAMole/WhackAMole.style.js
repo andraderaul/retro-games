@@ -140,6 +140,7 @@ export const Button = styled.button`
   color: #ef476f;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
 
   @media (max-width: 540px) {
     padding: 0.7em;

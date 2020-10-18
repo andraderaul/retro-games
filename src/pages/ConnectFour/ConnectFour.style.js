@@ -1,23 +1,78 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d405b;
+`;
+
 export const Grid = styled.div`
-  border: 1px solid;
+  background-color: #d6bbc0;
+  border: 3px solid;
   display: flex;
   flex-wrap: wrap;
-  height: 120px;
-  width: 142px;
+  width: 654.3px;
+  height: 554px;
   overflow: hidden;
+
+  -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+  box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+`;
+
+export const GameOver = styled.div`
+  width: 654.3px;
+  height: 554px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Square = styled.div`
-  height: 20px;
-  width: 20px;
+  height: 91.5px;
+  width: 92.6px;
   border: 1px solid;
+  cursor: pointer;
 `;
 export const Circle = styled.div`
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: ${({ player }) =>
-    player === 1 ? "red" : player === 2 ? "blue" : "none"};
+    player === 1 ? "#e63946" : player === 2 ? "#457b9d" : "none"};
+`;
+
+export const Title = styled.h1`
+  font-size: 3rem;
+  text-align: center;
+  color: #f8edeb;
+  margin-bottom: 0.7rem;
+`;
+
+export const Subtitle = styled.h2`
+  font-size: 2rem;
+  color: #f8edeb;
+  margin-bottom: 0.7rem;
+  span {
+    color: #ef476f;
+    font-weight: bold;
+  }
+`;
+
+export const Button = styled.button`
+  border: 1px solid #ef476f;
+  border-radius: 4px;
+  padding: 1em;
+  background-color: #f8edeb;
+  color: #ef476f;
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
 `;
