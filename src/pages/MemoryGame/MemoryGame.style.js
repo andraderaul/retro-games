@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: linear-gradient(#d2d9db, #b0bcbf);
+  background-color: #3d405b;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Box = styled.div`
@@ -164,6 +165,7 @@ export const Title = styled.div`
   display: flex;
   max-width: 10em;
   align-items: center;
+  color: #f8edeb;
   h1 {
     text-align: center;
   }
