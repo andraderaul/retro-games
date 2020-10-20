@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../helpers/styles/breakpoints";
 
 export const Container = styled.div`
   background-color: #3d405b;
@@ -24,7 +25,7 @@ export const Box = styled.div`
   -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
   box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
 
-  @media (max-width: 1440px) {
+  @media (max-width: ${breakpoints.xl}) {
     width: 95%;
   }
 `;
@@ -46,7 +47,7 @@ export const button = styled.span`
     transform: scale(1.2, 1.2);
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${breakpoints.md}) {
     display: none;
   }
 `;
@@ -72,7 +73,7 @@ const arrow = styled.div`
   left: 5%;
   border-radius: 5px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${breakpoints.md}) {
     display: none;
   }
 `;
@@ -121,7 +122,7 @@ const display = styled.div`
     font-size: 26px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     width: 5em;
     height: 5em;
     h3 {
@@ -133,7 +134,7 @@ const display = styled.div`
       font-size: 20px;
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     min-width: 5em;
     min-height: 5em;
   }
@@ -169,7 +170,7 @@ export const Title = styled.div`
   h1 {
     text-align: center;
   }
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     font-size: 15px;
   }
 `;
@@ -185,7 +186,7 @@ export const Image = styled.img`
     transform: scale(1.1, 1.1);
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     max-width: 50%;
     margin: 0.5rem;
   }

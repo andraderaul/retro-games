@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../helpers/styles/breakpoints";
 
 export const Container = styled.div`
   width: 100%;
@@ -23,6 +24,11 @@ export const Grid = styled.div`
   -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
   box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+
+  @media (max-width: ${breakpoints.xs}) {
+    width: 100%;
+    height: 366px;
+  }
 `;
 
 export const GameOver = styled.div`
@@ -32,6 +38,11 @@ export const GameOver = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${breakpoints.xs}) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const Square = styled.div`
@@ -39,6 +50,11 @@ export const Square = styled.div`
   width: 92.6px;
   border: 1px solid;
   cursor: pointer;
+
+  @media (max-width: ${breakpoints.xs}) {
+    width: 59.8px;
+    height: 59.8px;
+  }
 `;
 export const Circle = styled.div`
   height: 100%;

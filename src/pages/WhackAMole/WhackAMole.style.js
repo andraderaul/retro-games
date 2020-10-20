@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import breakpoints from "../../helpers/styles/breakpoints";
 
 export const Container = styled.div`
   background-color: #3d405b;
@@ -37,7 +38,7 @@ export const GameOver = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     width: 100%;
     height: auto;
   }
@@ -52,7 +53,7 @@ export const Square = styled.div`
   border-color: #81b29a;
   background-color: #e07a5f;
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     width: 110px;
     height: 110px;
     margin: 0.3em;
@@ -99,7 +100,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-evenly;
 
-    @media (max-width: 540px) {
+    @media (max-width: ${breakpoints.xs}) {
       flex-direction: column;
     }
   }
@@ -111,7 +112,7 @@ export const Title = styled.h1`
   color: #f8edeb;
   margin-bottom: 0.7rem;
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     font-size: 2rem;
   }
 `;
@@ -125,7 +126,7 @@ export const Subtitle = styled.h2`
     font-weight: bold;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
   }
@@ -142,7 +143,7 @@ export const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
 
-  @media (max-width: 540px) {
+  @media (max-width: ${breakpoints.xs}) {
     padding: 0.7em;
   }
 `;
