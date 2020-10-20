@@ -30,13 +30,13 @@ export const GameOver = styled.div`
 `;
 
 export const Square = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 20.2px;
+  height: 20.2px;
 `;
 
 export const Box = styled.div`
   height: 100%;
   width: 100%;
   background-color: ${({ type }) =>
-    type === "snake" ? "white" : type === "apple" ? "purple" : "black"};
+    type === "snake" ? "blue" : type === "apple" ? "purple" : "none"};
 `;

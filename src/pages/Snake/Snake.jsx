@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid, Square, Box } from "./Snake.style";
+import { Container, Grid, Square, Box, GameOver } from "./Snake.style";
 
 import useInterval from "../../hook/useInterval";
 import { snakeArray } from "../../helpers/Utils/Utils";
@@ -89,7 +89,7 @@ const Snake = () => {
           })}
         </Grid>
       ) : (
-        <Grid>Game Over</Grid>
+        <GameOver>Game Over</GameOver>
       )}
     </Container>
   );
