@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import {
   connectFourArray,
   connectFourWinningArrays,
-} from "../../helpers/MemoryGame/Utils";
+} from "../../helpers/Utils/Utils";
 import {
   Grid,
   Square,

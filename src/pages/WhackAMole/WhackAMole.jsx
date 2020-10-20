@@ -12,7 +12,7 @@ import {
 
 import useInterval from "../../hook/useInterval";
 import mole from "../../assets/images/mole.png";
-import { positionsArray, displayNumber } from "../../helpers/MemoryGame/Utils";
+import { positionsArray, displayNumber } from "../../helpers/Utils/Utils";
 
 const WhackAMole = () => {
   const [result, setResult] = useState(0);

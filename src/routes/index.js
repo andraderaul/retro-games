@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import MemoryGame from "../pages/MemoryGame";
 import WhackAMole from "../pages/WhackAMole";
 import ConnectFour from "../pages/ConnectFour";
+import Snake from "../pages/Snake";
 
 const Routes = (props) => {
   return (
@@ -14,6 +15,7 @@ const Routes = (props) => {
         <Route path="/memory-game" component={MemoryGame} />
         <Route path="/whack-a-mole" component={WhackAMole} />
         <Route path="/connect-four" component={ConnectFour} />
+        <Route path="/snake" component={Snake} />
       </Switch>
     </BrowserRouter>
   );

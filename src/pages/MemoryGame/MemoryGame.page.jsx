@@ -16,7 +16,7 @@ import {
 
 import blank from "../../assets/images/blank.png";
 import white from "../../assets/images/white.png";
-import { cardArray } from "../../helpers/MemoryGame/Utils";
+import { cardArray } from "../../helpers/Utils/Utils";
 
 const MemoryGame = () => {
   const [cardsChosen, setCardsChosen] = useState([]);
@@ -56,7 +56,11 @@ const MemoryGame = () => {
         <Image
           key={index}
           src={
-            cardsChosenId.includes(index) ? data.img : cardsWonId.includes(index) ? white : blank
+            cardsChosenId.includes(index)
+              ? data.img
+              : cardsWonId.includes(index)
+              ? white
+              : blank
           }
           onClick={cardsWonId.includes(index) ? null : () => flipCard(index)}
         />

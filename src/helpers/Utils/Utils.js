@@ -156,3 +156,5 @@ export const connectFourWinningArrays = [
   [12, 19, 26, 33],
   [13, 20, 27, 34],
 ];
+
+export const snakeArray = Array.from(Array(100).keys());
