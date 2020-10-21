@@ -1,17 +1,6 @@
 import styled from "styled-components";
 import breakpoints from "../../helpers/styles/breakpoints";
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: beige;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #3d405b;
-`;
-
 export const Grid = styled.div`
   background-color: #d6bbc0;
   border: 3px solid;
@@ -62,33 +51,4 @@ export const Circle = styled.div`
   border-radius: 50%;
   background-color: ${({ player }) =>
     player === 1 ? "#e63946" : player === 2 ? "#457b9d" : "none"};
-`;
-
-export const Title = styled.h1`
-  font-size: 3rem;
-  text-align: center;
-  color: #f8edeb;
-  margin-bottom: 0.7rem;
-`;
-
-export const Subtitle = styled.h2`
-  font-size: 2rem;
-  color: #f8edeb;
-  margin-bottom: 0.7rem;
-  span {
-    color: #ef476f;
-    font-weight: bold;
-  }
-`;
-
-export const Button = styled.button`
-  border: 1px solid #ef476f;
-  border-radius: 4px;
-  padding: 1em;
-  background-color: #f8edeb;
-  color: #ef476f;
-  font-size: 1rem;
-  font-weight: bold;
-
-  cursor: pointer;
 `;

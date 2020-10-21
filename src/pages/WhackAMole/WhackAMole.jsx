@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import {
-  Grid,
-  Square,
-  Container,
-  Header,
-  Title,
-  Subtitle,
-  Button,
-  GameOver,
-} from "./WhackAMole.style";
+
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
+import Subtitle from "../../components/Subtitle";
+
+import { Grid, Square, Header, GameOver } from "./WhackAMole.style";
 
 import useInterval from "../../hook/useInterval";
 import mole from "../../assets/images/mole.png";

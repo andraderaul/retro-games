@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid, Square, Box, GameOver } from "./Snake.style";
+
+import { snakeArray } from "../../helpers/Utils/Utils";
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
+import Subtitle from "../../components/Subtitle";
+
+import { Grid, Square, Box, GameOver } from "./Snake.style";
 
 import useInterval from "../../hook/useInterval";
-import { snakeArray } from "../../helpers/Utils/Utils";
 
 const Snake = () => {
   const width = 10;
@@ -67,9 +73,21 @@ const Snake = () => {
     document.addEventListener("keydown", control);
   }, [direction]);
 
+  const handlerRestart = () => {
+    setIntervalTime(1000);
+    setCurrentSnake([2, 1, 0]);
+    setDirection(1);
+    setScore(0);
+    setIsRunning(true);
+  };
+
   return (
     <Container>
-      {score}
+      <Title>Snake!</Title>
+      <Subtitle>
+        Score: <span>{score}</span>
+      </Subtitle>
+
       {isRunning ? (
         <Grid>
           {snakeArray.map((snake, index) => {
@@ -89,7 +107,10 @@ const Snake = () => {
           })}
         </Grid>
       ) : (
-        <GameOver>Game Over</GameOver>
+        <GameOver>
+          <Title>Game Over</Title>
+          <Button onClick={handlerRestart}>Restart</Button>
+        </GameOver>
       )}
     </Container>
   );

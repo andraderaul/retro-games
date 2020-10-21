@@ -4,16 +4,13 @@ import {
   connectFourArray,
   connectFourWinningArrays,
 } from "../../helpers/Utils/Utils";
-import {
-  Grid,
-  Square,
-  Circle,
-  Container,
-  Title,
-  Subtitle,
-  GameOver,
-  Button,
-} from "./ConnectFour.style";
+
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import Title from "../../components/Title";
+import Subtitle from "../../components/Subtitle";
+
+import { Grid, Square, Circle, GameOver } from "./ConnectFour.style";
 
 const ConnectFour = () => {
   const [squares, setSquares] = useState(connectFourArray);

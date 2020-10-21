@@ -1,14 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Title from "../../components/Title";
+import { Content, Container } from "./Home.style";
 const Home = () => {
   return (
-    <div>
-      <Link to="/memory-game">Memory Game</Link>
-      <Link to="/whack-a-mole">Whack A Mole!</Link>
-      <Link to="/connect-four">Connect Four</Link>
-      <Link to="/snake">Snake</Link>
-    </div>
+    <Container>
+      <Content>
+        <Link to="/memory-game">
+          <Title>Memory Game</Title>
+        </Link>
+      </Content>
+      <Content>
+        <Link to="/whack-a-mole">
+          <Title>Whack A Mole!</Title>
+        </Link>
+      </Content>
+      <Content>
+        <Link to="/connect-four">
+          <Title>Connect Four</Title>
+        </Link>
+      </Content>
+      <Content>
+        <Link to="/snake">
+          <Title>Snake</Title>
+        </Link>
+      </Content>
+    </Container>
   );
 };
 

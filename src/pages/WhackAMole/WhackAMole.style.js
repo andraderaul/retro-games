@@ -1,16 +1,6 @@
 import styled, { css } from "styled-components";
 import breakpoints from "../../helpers/styles/breakpoints";
 
-export const Container = styled.div`
-  background-color: #3d405b;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const Grid = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -103,47 +93,5 @@ export const Header = styled.header`
     @media (max-width: ${breakpoints.xs}) {
       flex-direction: column;
     }
-  }
-`;
-
-export const Title = styled.h1`
-  font-size: 3rem;
-  text-align: center;
-  color: #f8edeb;
-  margin-bottom: 0.7rem;
-
-  @media (max-width: ${breakpoints.xs}) {
-    font-size: 2rem;
-  }
-`;
-
-export const Subtitle = styled.h2`
-  font-size: 2rem;
-  color: #f8edeb;
-  margin-bottom: 0.7rem;
-  span {
-    color: #ef476f;
-    font-weight: bold;
-  }
-
-  @media (max-width: ${breakpoints.xs}) {
-    font-size: 1.5rem;
-    margin-bottom: 0.3rem;
-  }
-`;
-
-export const Button = styled.button`
-  border: 1px solid #ef476f;
-  border-radius: 4px;
-  padding: 1em;
-
-  background-color: #f8edeb;
-  color: #ef476f;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-
-  @media (max-width: ${breakpoints.xs}) {
-    padding: 0.7em;
   }
 `;
