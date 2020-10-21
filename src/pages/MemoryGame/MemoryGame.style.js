@@ -18,7 +18,7 @@ export const Box = styled.div`
   max-width: 1000px;
   width: 70%;
   padding: 4em 2em;
-  background-color: #884aaf;
+  background-color: #ef476f;
   border-radius: 30px;
 
   -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
@@ -29,6 +29,7 @@ export const Box = styled.div`
     width: 95%;
   }
 `;
+
 export const button = styled.span`
   position: absolute;
   width: 5em;
@@ -89,7 +90,7 @@ export const Content = styled.div`
   justify-content: center;
   border-radius: 6px;
   max-width: 600px;
-  min-height: 300px;
+  min-height: 432px;
   border: 3px solid #2c2b2b;
   background-color: #2c2b2b;
   display: flex;
@@ -98,6 +99,13 @@ export const Content = styled.div`
   -webkit-box-shadow: inset -1px -1px 48px -16px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: inset -1px -1px 48px -16px rgba(0, 0, 0, 0.63);
   box-shadow: inset -1px -1px 48px -16px rgba(0, 0, 0, 0.63);
+`;
+
+export const GameOver = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const display = styled.div`

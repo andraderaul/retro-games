@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Button from "../../components/Button";
+import TitleComponent from "../../components/Title";
+
 import {
   Container,
   Content,
@@ -12,6 +15,7 @@ import {
   ArrowA,
   ArrowB,
   WrapperDisplay,
+  GameOver,
 } from "./MemoryGame.style";
 
 import blank from "../../assets/images/blank.png";
@@ -68,6 +72,22 @@ const MemoryGame = () => {
     });
   };
 
+  const handlerRestart = () => {
+    setCardsChosen([]);
+    setCardsChosenId([]);
+    setCardsWonId([]);
+    setAttempts(0);
+  };
+
+  const renderGameOver = () => {
+    return (
+      <GameOver>
+        <TitleComponent>Congratulations! You found them all!</TitleComponent>
+        <Button onClick={handlerRestart}>Restart</Button>
+      </GameOver>
+    );
+  };
+
   const flipCard = (index) => {
     setCardsChosenId((oldChosenId) => [...oldChosenId, index]);
     setCardsChosen((oldCardsChosen) => [...oldCardsChosen, cardArray[index]]);
@@ -79,11 +99,7 @@ const MemoryGame = () => {
         <h3>Score</h3> <span>{cardsWonId.length / 2}</span>
       </Score>
       <Title>
-        {cardsWonId.length === cardArray.length ? (
-          <h1>Congratulations! You found them all!</h1>
-        ) : (
-          <h1>Memory Game</h1>
-        )}
+        <h1>Memory Game</h1>
       </Title>
       <Attempts>
         <h3>Attempts</h3> <span>{attempts}</span>
@@ -97,7 +113,11 @@ const MemoryGame = () => {
       <Box>
         <ArrowA />
         <ArrowB />
-        <Content>{renderBoard()}</Content>
+        <Content>
+          {cardsWonId.length !== cardArray.length
+            ? renderBoard()
+            : renderGameOver()}
+        </Content>
         <ButtonA>A</ButtonA>
         <ButtonB>B</ButtonB>
       </Box>
