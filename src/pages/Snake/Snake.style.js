@@ -85,12 +85,13 @@ export const Positioned = styled.div`
 `;
 
 export const GameOver = styled.div`
-  width: 408px;
+  width: 208px;
   height: 208px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #333;
 `;
 
 export const Square = styled.div`

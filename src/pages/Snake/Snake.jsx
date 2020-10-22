@@ -97,8 +97,8 @@ const Snake = () => {
         Score: <span>{score}</span>
       </Subtitle>
 
-      {true ? (
-        <Board>
+      <Board>
+        {isRunning ? (
           <Grid>
             {snakeArray.map((snake, index) => {
               return (
@@ -116,23 +116,23 @@ const Snake = () => {
               );
             })}
           </Grid>
-          <ButtonA bottom="40%" left="20%" />
-          <ButtonA bottom="35%" left="30%" />
-          <ButtonA bottom="30%" left="20%" />
-          <ButtonA bottom="35%" left="10%" />
-          <ButtonB />
-          <Positioned>
-            <h3>Brick</h3>
-            <h3>Game</h3>
-            <span>9999 in 1</span>
-          </Positioned>
-        </Board>
-      ) : (
-        <GameOver>
-          <Title>Game Over</Title>
-          <Button onClick={handlerRestart}>Restart</Button>
-        </GameOver>
-      )}
+        ) : (
+          <GameOver>
+            <Title>Game Over</Title>
+            <Button onClick={handlerRestart}>Restart</Button>
+          </GameOver>
+        )}
+        <ButtonA bottom="40%" left="20%" />
+        <ButtonA bottom="35%" left="30%" />
+        <ButtonA bottom="30%" left="20%" />
+        <ButtonA bottom="35%" left="10%" />
+        <ButtonB />
+        <Positioned>
+          <h3>Brick</h3>
+          <h3>Game</h3>
+          <span>9999 in 1</span>
+        </Positioned>
+      </Board>
     </Container>
   );
 };
