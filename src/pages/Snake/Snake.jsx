@@ -6,7 +6,16 @@ import Container from "../../components/Container";
 import Title from "../../components/Title";
 import Subtitle from "../../components/Subtitle";
 
-import { Grid, Square, Box, GameOver } from "./Snake.style";
+import {
+  Grid,
+  Square,
+  Box,
+  GameOver,
+  Board,
+  ButtonB,
+  ButtonA,
+  Positioned,
+} from "./Snake.style";
 
 import useInterval from "../../hook/useInterval";
 
@@ -88,24 +97,36 @@ const Snake = () => {
         Score: <span>{score}</span>
       </Subtitle>
 
-      {isRunning ? (
-        <Grid>
-          {snakeArray.map((snake, index) => {
-            return (
-              <Square>
-                <Box
-                  type={
-                    currentSnake.includes(index)
-                      ? "snake"
-                      : appleIndex === index
-                      ? "apple"
-                      : ""
-                  }
-                />
-              </Square>
-            );
-          })}
-        </Grid>
+      {true ? (
+        <Board>
+          <Grid>
+            {snakeArray.map((snake, index) => {
+              return (
+                <Square>
+                  <Box
+                    type={
+                      currentSnake.includes(index)
+                        ? "snake"
+                        : appleIndex === index
+                        ? "apple"
+                        : ""
+                    }
+                  />
+                </Square>
+              );
+            })}
+          </Grid>
+          <ButtonA bottom="40%" left="20%" />
+          <ButtonA bottom="35%" left="30%" />
+          <ButtonA bottom="30%" left="20%" />
+          <ButtonA bottom="35%" left="10%" />
+          <ButtonB />
+          <Positioned>
+            <h3>Brick</h3>
+            <h3>Game</h3>
+            <span>9999 in 1</span>
+          </Positioned>
+        </Board>
       ) : (
         <GameOver>
           <Title>Game Over</Title>
