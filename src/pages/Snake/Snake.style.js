@@ -61,6 +61,7 @@ export const ButtonB = styled(button)`
 export const ButtonA = styled(button)`
   bottom: ${({ bottom }) => bottom};
   left: ${({ left }) => left};
+  cursor: pointer;
 `;
 
 export const Positioned = styled.div`

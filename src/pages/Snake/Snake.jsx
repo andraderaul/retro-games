@@ -82,6 +82,10 @@ const Snake = () => {
     document.addEventListener("keydown", control);
   }, [direction]);
 
+  const handleOnClickButtons = (newDirection) => {
+    setDirection(newDirection);
+  };
+
   const handlerRestart = () => {
     setIntervalTime(1000);
     setCurrentSnake([2, 1, 0]);
@@ -122,10 +126,26 @@ const Snake = () => {
             <Button onClick={handlerRestart}>Restart</Button>
           </GameOver>
         )}
-        <ButtonA bottom="40%" left="20%" />
-        <ButtonA bottom="35%" left="30%" />
-        <ButtonA bottom="30%" left="20%" />
-        <ButtonA bottom="35%" left="10%" />
+        <ButtonA
+          bottom="40%"
+          left="20%"
+          onClick={() => handleOnClickButtons(-width)}
+        />
+        <ButtonA
+          bottom="35%"
+          left="30%"
+          onClick={() => handleOnClickButtons(1)}
+        />
+        <ButtonA
+          bottom="30%"
+          left="20%"
+          onClick={() => handleOnClickButtons(+width)}
+        />
+        <ButtonA
+          bottom="35%"
+          left="10%"
+          onClick={() => handleOnClickButtons(-1)}
+        />
         <ButtonB />
         <Positioned>
           <h3>Brick</h3>
