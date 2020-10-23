@@ -21,6 +21,7 @@ export const Board = styled.div`
   padding: 4em 2em;
   background-color: #ef476f;
   border-radius: 30px;
+  border: 4px solid #402f44;
 
   box-shadow: inset -20px 0 rgba(0, 0, 0, 0.1),
     inset 10px 0 rgba(255, 255, 255, 0.2),
