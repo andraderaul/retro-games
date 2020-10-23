@@ -41,6 +41,7 @@ export const button = styled.span`
   border: 2px solid rgba(0, 0, 0, 0.6);
   background-color: #f2dc27;
   z-index: 2;
+  cursor: pointer;
 
   -webkit-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
@@ -61,7 +62,6 @@ export const ButtonB = styled(button)`
 export const ButtonA = styled(button)`
   bottom: ${({ bottom }) => bottom};
   left: ${({ left }) => left};
-  cursor: pointer;
 `;
 
 export const Positioned = styled.div`

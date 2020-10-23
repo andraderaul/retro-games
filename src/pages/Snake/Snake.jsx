@@ -146,7 +146,7 @@ const Snake = () => {
           left="10%"
           onClick={() => handleOnClickButtons(-1)}
         />
-        <ButtonB />
+        <ButtonB onClick={!isRunning ? handlerRestart : null} />
         <Positioned>
           <h3>Brick</h3>
           <h3>Game</h3>
