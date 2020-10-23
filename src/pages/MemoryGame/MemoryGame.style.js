@@ -20,10 +20,11 @@ export const Box = styled.div`
   padding: 4em 2em;
   background-color: #ef476f;
   border-radius: 30px;
+  border: 4px solid #402f44;
 
-  -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
-  -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
-  box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+  box-shadow: inset -20px 0 rgba(0, 0, 0, 0.1),
+    inset 10px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px rgba(255, 255, 255, 0.5);
 
   @media (max-width: ${breakpoints.xl}) {
     width: 95%;
@@ -38,11 +39,9 @@ export const button = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgba(0, 0, 0, 0.6);
-
-  -webkit-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
+  border: 4px solid #402f44;
+  cursor: pointer;
+  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: scale(1.2, 1.2);
@@ -73,6 +72,7 @@ const arrow = styled.div`
   top: 50%;
   left: 5%;
   border-radius: 5px;
+  border: 4px solid #402f44;
 
   @media (max-width: ${breakpoints.md}) {
     display: none;
@@ -84,6 +84,15 @@ export const ArrowA = styled(arrow)`
 `;
 
 export const ArrowB = styled(arrow)``;
+
+export const ArrowC = styled(arrow)`
+  width: 1.52em;
+  height: 2em;
+  border: none;
+  border-radius: revert;
+  top: 50%;
+  left: 10.3%;
+`;
 
 export const Content = styled.div`
   width: 100%;

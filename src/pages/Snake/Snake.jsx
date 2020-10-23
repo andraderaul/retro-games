@@ -107,7 +107,11 @@ const Snake = () => {
       <Subtitle>
         Score: <span>{score}</span>
       </Subtitle>
-
+      {!isRunning && (
+        <Paused>
+          <Title>Paused</Title>
+        </Paused>
+      )}
       <Board>
         {isAlive ? (
           <Grid>
@@ -126,11 +130,6 @@ const Snake = () => {
                 </Square>
               );
             })}
-            {!isRunning && (
-              <Paused>
-                <Title>Paused</Title>
-              </Paused>
-            )}
           </Grid>
         ) : (
           <GameOver>

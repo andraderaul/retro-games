@@ -40,16 +40,15 @@ export const button = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgba(0, 0, 0, 0.6);
+  border: 3px solid #402f44;
   background-color: #f2dc27;
-  z-index: 2;
+
   cursor: pointer;
+  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: scale(1.05, 1.05);
   }
-
-  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.1);
 `;
 
 export const ButtonB = styled(button)`
@@ -76,6 +75,7 @@ export const ButtonA = styled(button)`
 `;
 
 export const ButtonC = styled(button)`
+  z-index: 2;
   width: 1em;
   height: 1em;
   bottom: ${({ bottom }) => bottom};

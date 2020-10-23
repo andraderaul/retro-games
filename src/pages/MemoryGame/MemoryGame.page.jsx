@@ -14,6 +14,7 @@ import {
   ButtonB,
   ArrowA,
   ArrowB,
+  ArrowC,
   WrapperDisplay,
   GameOver,
 } from "./MemoryGame.style";
@@ -113,6 +114,7 @@ const MemoryGame = () => {
       <Box>
         <ArrowA />
         <ArrowB />
+        <ArrowC />
         <Content>
           {cardsWonId.length !== cardArray.length
             ? renderBoard()
