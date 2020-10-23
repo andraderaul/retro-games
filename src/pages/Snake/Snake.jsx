@@ -14,7 +14,9 @@ import {
   Board,
   ButtonB,
   ButtonA,
+  ButtonC,
   Positioned,
+  Paused,
 } from "./Snake.style";
 
 import useInterval from "../../hook/useInterval";
@@ -31,6 +33,7 @@ const Snake = () => {
   const [direction, setDirection] = useState(1);
   const [score, setScore] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
+  const [isAlive, setIsAlive] = useState(true);
 
   const moveOutComes = () => {
     if (
@@ -41,7 +44,7 @@ const Snake = () => {
       currentSnake.includes(currentSnake[0] + direction)
     ) {
       console.log("endgame");
-      setIsRunning(false);
+      setIsAlive(false);
     }
     let tail;
     setCurrentSnake((prevSnake) => {
@@ -91,7 +94,11 @@ const Snake = () => {
     setCurrentSnake([2, 1, 0]);
     setDirection(1);
     setScore(0);
-    setIsRunning(true);
+    setIsAlive(true);
+  };
+
+  const handlerPause = () => {
+    setIsRunning((oldIsRunning) => !oldIsRunning);
   };
 
   return (
@@ -102,7 +109,7 @@ const Snake = () => {
       </Subtitle>
 
       <Board>
-        {isRunning ? (
+        {isAlive ? (
           <Grid>
             {snakeArray.map((snake, index) => {
               return (
@@ -119,6 +126,11 @@ const Snake = () => {
                 </Square>
               );
             })}
+            {!isRunning && (
+              <Paused>
+                <Title>Paused</Title>
+              </Paused>
+            )}
           </Grid>
         ) : (
           <GameOver>
@@ -132,21 +144,32 @@ const Snake = () => {
           onClick={() => handleOnClickButtons(-width)}
         />
         <ButtonA
+          rot="90deg"
           bottom="35%"
           left="30%"
           onClick={() => handleOnClickButtons(1)}
         />
         <ButtonA
+          rot="180deg"
           bottom="30%"
           left="20%"
           onClick={() => handleOnClickButtons(+width)}
         />
         <ButtonA
+          rot="270deg"
           bottom="35%"
           left="10%"
           onClick={() => handleOnClickButtons(-1)}
         />
-        <ButtonB onClick={!isRunning ? handlerRestart : null} />
+        <ButtonB />
+        <ButtonC
+          bottom="48%"
+          left="65%"
+          onClick={!isRunning ? handlerRestart : null}
+        />
+        <ButtonC bottom="48%" left="55%" onClick={handlerPause} />
+        <ButtonC bottom="48%" left="40%" />
+        <ButtonC bottom="48%" left="30%" />
         <Positioned>
           <h3>Brick</h3>
           <h3>Game</h3>

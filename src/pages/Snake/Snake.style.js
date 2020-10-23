@@ -8,6 +8,7 @@ export const Grid = styled.div`
   flex-wrap: wrap;
   background-color: #fff;
   border-style: solid;
+  position: relative;
 `;
 
 export const Board = styled.div`
@@ -21,9 +22,9 @@ export const Board = styled.div`
   background-color: #ef476f;
   border-radius: 30px;
 
-  -webkit-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
-  -moz-box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
-  box-shadow: 14px 17px 16px -6px rgba(0, 0, 0, 0.63);
+  box-shadow: inset -20px 0 rgba(0, 0, 0, 0.1),
+    inset 10px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px rgba(255, 255, 255, 0.5);
 
   @media (max-width: ${breakpoints.xl}) {
     width: 95%;
@@ -43,13 +44,11 @@ export const button = styled.span`
   z-index: 2;
   cursor: pointer;
 
-  -webkit-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px -7px 75px 2px rgba(0, 0, 0, 0.15);
-
   &:hover {
     transform: scale(1.05, 1.05);
   }
+
+  box-shadow: inset -3px 0 rgba(0, 0, 0, 0.1);
 `;
 
 export const ButtonB = styled(button)`
@@ -60,6 +59,24 @@ export const ButtonB = styled(button)`
 `;
 
 export const ButtonA = styled(button)`
+  bottom: ${({ bottom }) => bottom};
+  left: ${({ left }) => left};
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    transform: ${({ rot }) => `rotate(${rot})`};
+    position: absolute;
+  }
+`;
+
+export const ButtonC = styled(button)`
+  width: 1em;
+  height: 1em;
   bottom: ${({ bottom }) => bottom};
   left: ${({ left }) => left};
 `;
@@ -93,6 +110,37 @@ export const GameOver = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #333;
+
+  animation: fadeIn ease 600ms;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+export const Paused = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  animation: fadeIn ease 500ms;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const Square = styled.div`
