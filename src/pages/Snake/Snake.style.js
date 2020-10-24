@@ -145,8 +145,8 @@ export const Paused = styled.div`
 `;
 
 export const Square = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 20.2px;
+  height: 20.2px;
 `;
 
 export const Box = styled.div`

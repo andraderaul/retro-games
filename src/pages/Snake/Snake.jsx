@@ -161,11 +161,7 @@ const Snake = () => {
           onClick={() => handleOnClickButtons(-1)}
         />
         <ButtonB />
-        <ButtonC
-          bottom="48%"
-          left="65%"
-          onClick={!isRunning ? handlerRestart : null}
-        />
+        <ButtonC bottom="48%" left="65%" onClick={handlerRestart} />
         <ButtonC bottom="48%" left="55%" onClick={handlerPause} />
         <ButtonC bottom="48%" left="40%" />
         <ButtonC bottom="48%" left="30%" />
