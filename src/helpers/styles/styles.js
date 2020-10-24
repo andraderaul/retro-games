@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
         outline: none;
         box-sizing: border-box;
     }
+
+    html {
+        position: relative;
+    }
 `;
 
 export default GlobalStyle;
