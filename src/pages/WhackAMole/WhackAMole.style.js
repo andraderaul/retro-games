@@ -94,4 +94,31 @@ export const Header = styled.header`
       flex-direction: column;
     }
   }
+
+  div:last-child {
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+  }
+`;
+
+export const Paused = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  animation: fadeIn ease 500ms;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;

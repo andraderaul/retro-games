@@ -2,6 +2,7 @@ import styled from "styled-components";
 import breakpoints from "../../helpers/styles/breakpoints";
 
 const Button = styled.button`
+  min-width: 7em;
   border: 1px solid #ef476f;
   border-radius: 4px;
   padding: 1em;

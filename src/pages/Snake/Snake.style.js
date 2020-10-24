@@ -145,13 +145,13 @@ export const Paused = styled.div`
 `;
 
 export const Square = styled.div`
-  width: 20.2px;
-  height: 20.2px;
+  width: 20px;
+  height: 20px;
 `;
 
 export const Box = styled.div`
   height: 100%;
   width: 100%;
   background-color: ${({ type }) =>
-    type === "snake" ? "blue" : type === "apple" ? "purple" : "none"};
+    type === "snake" ? "black" : type === "apple" ? "purple" : "none"};
 `;
