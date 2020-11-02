@@ -4,11 +4,11 @@ In this repository contains a fews retro games. This games were developed using 
 
 The games at the moment are:
 
-- Memory Game
-- Whack A Mole!
-- Connect Four
-- Snake
-- Space Invaders
+- (Memory Game)[https://silly-shaw-01b5a1.netlify.app/memory-game]
+- (Whack A Mole!)[https://silly-shaw-01b5a1.netlify.app/whack-a-mole]
+- (Connect Four)[https://silly-shaw-01b5a1.netlify.app/connect-four]
+- (Snake)[https://silly-shaw-01b5a1.netlify.app/snake]
+- (Space Invaders)[https://silly-shaw-01b5a1.netlify.app/space-invaders]
 
 My inspiration for create this repo was a [kubowania](https://github.com/kubowania). Her developed all this game using Vanilla javascript, but I decide recreate using the library React and styled-components.
 
