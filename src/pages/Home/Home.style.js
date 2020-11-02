@@ -16,6 +16,7 @@ export const Content = styled.div`
   border-radius: 6px;
   padding: 1em;
   background-color: #ef476f;
+  margin: 1em;
 
   animation-name: zoom;
   animation-duration: 500ms;

@@ -83,6 +83,10 @@ const Snake = () => {
       }
     };
     document.addEventListener("keydown", control);
+
+    return () => {
+      document.removeEventListener("keydown", control);
+    };
   }, [direction]);
 
   const handleOnClickButtons = (newDirection) => {
@@ -117,7 +121,7 @@ const Snake = () => {
           <Grid>
             {snakeArray.map((snake, index) => {
               return (
-                <Square>
+                <Square key={index}>
                   <Box
                     type={
                       currentSnake.includes(index)
