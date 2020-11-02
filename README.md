@@ -12,7 +12,7 @@ The games at the moment are:
 
 My inspiration for create this repo was a [kubowania](https://github.com/kubowania). Her developed all this game using Vanilla javascript, but I decide recreate using the library React and styled-components.
 
-The repo is hosted in [netlify](https://www.netlify.com/), you can acess and let a have fun.
+The repo is hosted in [netlify](https://www.netlify.com/), you can access and let a have fun.
 
 ### References
 
