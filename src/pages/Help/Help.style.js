@@ -30,9 +30,19 @@ export const Box = styled.div`
     inset 4px 4px rgba(255, 255, 255, 0.5);
 
   &:hover {
-    transform: scale(1.05);
-    margin: 2em;
-    padding: 2em;
+    transform: scale(1.04);
+    margin: 1.2em;
+    padding: 1.2em;
+  }
+  animation: fadeIn 2s ease-in-out;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
