@@ -1,8 +1,8 @@
 # Retro Games
 
-In this repository contains a fews retro games. This games were developed using Reactjs.
+This repository contains a few retro games. These games were developed using Reactjs.
 
-The games at the moment are:
+Up to now, the games are:
 
 - [Memory Game](https://silly-shaw-01b5a1.netlify.app/memory-game)
 - [Whack A Mole!](https://silly-shaw-01b5a1.netlify.app/whack-a-mole)
@@ -10,9 +10,9 @@ The games at the moment are:
 - [Snake](https://silly-shaw-01b5a1.netlify.app/snake)
 - [Space Invaders](https://silly-shaw-01b5a1.netlify.app/space-invaders)
 
-My inspiration for create this repo was a [kubowania](https://github.com/kubowania). Her developed all this game using Vanilla javascript, but I decide recreate using the library React and styled-components.
+My inspiration to create this repo was [kubowania](https://github.com/kubowania). She developed all this game using Vanilla Javascript, but I decide recreate using the library React and styled-components.
 
-The repo is hosted in [netlify](https://www.netlify.com/), you can access and let a have fun.
+The repo is hosted in [netlify](https://www.netlify.com/), you can access it and have fun.
 
 ### References
 
