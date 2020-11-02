@@ -9,6 +9,8 @@ Up to now, the games are:
 - [Connect Four](https://silly-shaw-01b5a1.netlify.app/connect-four)
 - [Snake](https://silly-shaw-01b5a1.netlify.app/snake)
 - [Space Invaders](https://silly-shaw-01b5a1.netlify.app/space-invaders)
+- [Frogger]() under construction
+- [Tetris]() under construction
 
 My inspiration to create this repo was [kubowania](https://github.com/kubowania). She developed all this game using Vanilla Javascript, but I decide recreate using the library React and styled-components.
 
