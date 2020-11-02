@@ -8,6 +8,7 @@ import WhackAMole from "../pages/WhackAMole";
 import ConnectFour from "../pages/ConnectFour";
 import Snake from "../pages/Snake";
 import SpaceInvaders from "../pages/SpaceInvaders";
+import Help from "../pages/Help";
 
 const Routes = (props) => {
   return (
@@ -20,6 +21,7 @@ const Routes = (props) => {
         <Route path={ROUTES.connectFour} component={ConnectFour} />
         <Route path={ROUTES.snake} component={Snake} />
         <Route path={ROUTES.spaceInvaders} component={SpaceInvaders} />
+        <Route path={ROUTES.help} component={Help} />
       </Switch>
     </BrowserRouter>
   );

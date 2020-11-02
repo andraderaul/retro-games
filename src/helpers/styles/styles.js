@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
     html {
         position: relative;
+        background-color: #3d405b;
     }
 `;
 
