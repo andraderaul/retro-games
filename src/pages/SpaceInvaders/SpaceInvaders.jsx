@@ -6,7 +6,17 @@ import {
 import useInterval from "../../hook/useInterval";
 
 import Container from "../../components/Container";
-import { Grid, Square } from "./SpaceInvaders.style";
+import {
+  Grid,
+  Square,
+  Board,
+  PartA,
+  PartB,
+  GameOver,
+} from "./SpaceInvaders.style";
+import Title from "../../components/Title";
+import Subtitle from "../../components/Subtitle";
+import Button from "../../components/Button";
 
 const SpaceInvaders = () => {
   const width = 15;
@@ -17,6 +27,7 @@ const SpaceInvaders = () => {
   const [currentLaserIndex, setCurrentLaserIndex] = useState(null);
   const [boom, setBoom] = useState(null);
   const [isRunning, setIsRunning] = useState(true);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     const overflow = alienInvaders.some(
@@ -75,7 +86,7 @@ const SpaceInvaders = () => {
           setTimeout(() => setBoom(null), 250);
           clearInterval(laserId);
 
-          //TODO: result
+          setScore((oldScore) => oldScore + 1);
         }
         if (localLaserIndex < width) {
           clearInterval(laserId);
@@ -130,6 +141,10 @@ const SpaceInvaders = () => {
     isRunning ? 500 : null
   );
 
+  const handlerRestart = () => {
+    setIsRunning(true);
+  };
+
   const squareType = (index) => {
     return alienInvaders.includes(index)
       ? "invader"
@@ -144,11 +159,26 @@ const SpaceInvaders = () => {
 
   return (
     <Container>
-      <Grid>
-        {spaceInvadersArray.map((item, index) => (
-          <Square key={index} type={squareType(index)} />
-        ))}
-      </Grid>
+      <Title>Space Invaders</Title>
+      <Subtitle>
+        score : <span>{score}</span>
+      </Subtitle>
+      <Board>
+        <PartA />
+        <PartB />
+        {isRunning ? (
+          <Grid>
+            {spaceInvadersArray.map((item, index) => (
+              <Square key={index} type={squareType(index)} />
+            ))}
+          </Grid>
+        ) : (
+          <GameOver>
+            <Title>Game Over</Title>
+            <Button onClick={handlerRestart}>Restart</Button>
+          </GameOver>
+        )}
+      </Board>
     </Container>
   );
 };
