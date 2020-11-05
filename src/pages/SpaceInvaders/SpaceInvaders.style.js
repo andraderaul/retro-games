@@ -49,6 +49,7 @@ export const Board = styled.div`
   padding: 0px 0em;
   border: 1px solid #402f44;
   border-radius: 50px;
+  overflow: hidden;
 
   box-shadow: inset 20px 0 rgba(0, 0, 0, 0.1),
     inset 10px 0 rgba(255, 255, 255, 0.2),
