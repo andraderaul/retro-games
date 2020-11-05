@@ -42,12 +42,12 @@ export const Board = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 650px;
+  max-width: 640px;
   width: 100%;
   background-color: #101319;
-  height: 330px;
+  height: 320px;
   padding: 0px 0em;
-  border: 4px solid #402f44;
+  border: 1px solid #402f44;
   border-radius: 50px;
 
   box-shadow: inset 20px 0 rgba(0, 0, 0, 0.1),
@@ -76,6 +76,7 @@ export const PartA = styled.div`
   height: 320px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  border: 4px solid #402f44;
 
   box-shadow: inset -20px 0 rgba(0, 0, 0, 0.1),
     inset 10px 0 rgba(255, 255, 255, 0.2),
@@ -94,6 +95,7 @@ export const PartB = styled.div`
   height: 320px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  border: 4px solid #402f44;
 
   box-shadow: inset -20px 0 rgba(0, 0, 0, 0.1),
     inset 10px 0 rgba(255, 255, 255, 0.2),
