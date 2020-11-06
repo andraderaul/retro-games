@@ -72,7 +72,7 @@ export const Board = styled.div`
 export const PartA = styled.div`
   position: absolute;
   left: 0;
-  background-color: #118fd9;
+  background-color: #3cc2ef;
   width: 166px;
   height: 320px;
   border-top-left-radius: 50px;
@@ -90,7 +90,7 @@ export const PartA = styled.div`
 
 export const PartB = styled.div`
   position: absolute;
-  background-color: #de2a3d;
+  background-color: #ed6077;
   right: 0;
   width: 166px;
   height: 320px;
