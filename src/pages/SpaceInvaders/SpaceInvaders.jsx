@@ -143,6 +143,11 @@ const SpaceInvaders = () => {
 
   const handlerRestart = () => {
     setIsRunning(true);
+    setCurrentShooterIndex(202);
+    setDirection(1);
+    setAlienInvaders(alienInvadersArray);
+    setCurrentLaserIndex(null);
+    setScore(0);
   };
 
   const squareType = (index) => {

@@ -29,6 +29,16 @@ export const Box = styled.div`
   @media (max-width: ${breakpoints.xl}) {
     width: 95%;
   }
+
+  animation: fadeIn ease 1s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 export const button = styled.span`
