@@ -4,6 +4,7 @@ const whackAMole = "/whack-a-mole";
 const connectFour = "/connect-four";
 const snake = "/snake";
 const spaceInvaders = "/space-invaders";
+const tetris = "/tetris";
 const help = "/help";
 
 const ROUTES = {
@@ -13,6 +14,7 @@ const ROUTES = {
   connectFour,
   snake,
   spaceInvaders,
+  tetris,
   help,
 };
 

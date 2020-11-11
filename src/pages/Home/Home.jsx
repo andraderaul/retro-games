@@ -31,6 +31,11 @@ const Home = () => {
           <Title>Space Invaders</Title>
         </Link>
       </Content>
+      <Content>
+        <Link to={ROUTES.tetris}>
+          <Title>Tetris</Title>
+        </Link>
+      </Content>
     </Container>
   );
 };
