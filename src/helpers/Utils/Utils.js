@@ -240,3 +240,8 @@ export const theTetrominoes = [
   oTetromino,
   iTetromino,
 ];
+
+export const colors = ["orange", "red", "purple", "green", "blue"];
+
+export const getRandomItem = (array) =>
+  array[Math.floor(Math.random() * array.length)];

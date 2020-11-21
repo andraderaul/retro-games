@@ -11,5 +11,5 @@ export const Grid = styled.div`
 export const Square = styled.div`
   height: 20px;
   width: 20px;
-  background-color: ${({ type }) => (type === "tetromino" ? "blue" : "none")};
+  background-color: ${({ color }) => (color ? color : "none")};
 `;

@@ -87,7 +87,7 @@ const Snake = () => {
     return () => {
       document.removeEventListener("keydown", control);
     };
-  }, [direction]);
+  }, [width]);
 
   const handleOnClickButtons = (newDirection) => {
     setDirection(newDirection);

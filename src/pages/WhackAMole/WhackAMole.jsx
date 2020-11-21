@@ -9,7 +9,11 @@ import { Grid, Square, Header, GameOver, Paused } from "./WhackAMole.style";
 
 import useInterval from "../../hook/useInterval";
 import mole from "../../assets/images/mole.png";
-import { positionsArray, displayNumber } from "../../helpers/Utils/Utils";
+import {
+  positionsArray,
+  displayNumber,
+  getRandomItem,
+} from "../../helpers/Utils/Utils";
 
 const WhackAMole = () => {
   const [result, setResult] = useState(0);
@@ -17,11 +21,8 @@ const WhackAMole = () => {
   const [isAlive, setIsAlive] = useState(true);
   const [timer, setTimer] = useState(60);
 
-  const getRandomPosition = () =>
-    Math.floor(Math.random() * positionsArray.length);
-
   const [randomPosition, setRandomPosition] = useState(
-    positionsArray[getRandomPosition()]
+    getRandomItem(positionsArray)
   );
 
   const countDown = () => {
@@ -35,7 +36,7 @@ const WhackAMole = () => {
     if (timer === 0) {
       setIsAlive(false);
     }
-    setRandomPosition(positionsArray[getRandomPosition()]);
+    setRandomPosition(getRandomItem(positionsArray));
   };
 
   const handlerRestart = () => {
