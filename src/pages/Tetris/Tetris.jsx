@@ -10,11 +10,16 @@ import {
 import Container from "../../components/Container";
 import { Grid, Square } from "./Tetris.styles";
 
-const Board = ({ current, currentPosition, currentRotation }) => {
-  const squares = tetrisArray.map((tetris) => <Square />);
-  const color = getRandomItem(colors);
+const Board = ({ current, currentPosition, currentRotation, color }) => {
+  console.log({ current, currentPosition, currentRotation, color });
+  const squares = tetrisArray.map((tetris) => (
+    <Square key={`square-${tetris}`} />
+  ));
+
   current[currentRotation].forEach((index) => {
-    squares[currentPosition + index] = <Square color={color} />;
+    squares[currentPosition + index] = (
+      <Square color={color} key={`square-${currentPosition + index}`} />
+    );
   });
 
   return squares;
@@ -27,17 +32,19 @@ const Tetris = () => {
   const [currentRotation, setCurrentRotation] = useState(0);
 
   const [current, setCurrent] = useState(getRandomItem(theTetrominoes));
+  const [color, setColor] = useState("");
 
   const freeze = useCallback(() => {
-    const isNotAtBottomEdge = current.some(
+    const isNotAtBottomEdge = current[currentRotation].some(
       (index) => currentPosition + index + width > tetrisArray.length - 10
     );
+
     if (isNotAtBottomEdge) {
       console.log("freeze");
       setCurrent(getRandomItem(theTetrominoes));
       setCurrentPosition(4);
     }
-  }, [current, currentPosition]);
+  }, [current, currentPosition, currentRotation]);
 
   const moveDown = useCallback(() => {
     setCurrentPosition((oldPosition) => oldPosition + width);
@@ -45,34 +52,22 @@ const Tetris = () => {
   }, [freeze]);
 
   const moveLeft = useCallback(() => {
-    const isAtLeftEdge = current.some(
+    const isAtLeftEdge = current[currentRotation].some(
       (index) => (currentPosition + index) % width === 0
     );
     if (!isAtLeftEdge) {
       setCurrentPosition((oldPosition) => oldPosition - 1);
     }
-    // const isNotAtBottomEdge = current.some(
-    //   (index) => currentPosition + index > tetrisArray.length - 10
-    // );
-    // if (isNotAtBottomEdge) {
-    //   setCurrentPosition((oldPosition) => oldPosition + 1);
-    // }
-  }, [current, currentPosition, width]);
+  }, [current, currentPosition, currentRotation]);
 
   const moveRight = useCallback(() => {
-    const isAtRightEdge = current.some(
+    const isAtRightEdge = current[currentRotation].some(
       (index) => (currentPosition + index) % width === width - 1
     );
     if (!isAtRightEdge) {
       setCurrentPosition((oldPosition) => oldPosition + 1);
     }
-    // const isNotAtBottomEdge = current.some(
-    //   (index) => currentPosition + index > tetrisArray.length - 10
-    // );
-    // if (isNotAtBottomEdge) {
-    //   setCurrentPosition((oldPosition) => oldPosition - 1);
-    // }
-  }, [current, currentPosition, width]);
+  }, [current, currentPosition, currentRotation]);
 
   const rotate = useCallback(() => {
     const aux = currentRotation + 1;
@@ -85,6 +80,10 @@ const Tetris = () => {
       setCurrentRotation(0);
     }
   }, [current, currentRotation]);
+
+  useEffect(() => {
+    setColor(getRandomItem(colors));
+  }, []);
 
   useEffect(() => {
     const control = (e) => {
@@ -112,6 +111,7 @@ const Tetris = () => {
           current={current}
           currentPosition={currentPosition}
           currentRotation={currentRotation}
+          color={color}
         />
       </Grid>
     </Container>
