@@ -10,6 +10,16 @@ import {
 import Container from "../../components/Container";
 import { Grid, Square } from "./Tetris.styles";
 
+const Board = ({ current, currentPosition, currentRotation }) => {
+  const squares = tetrisArray.map((tetris) => <Square />);
+  const color = getRandomItem(colors);
+  current[currentRotation].forEach((index) => {
+    squares[currentPosition + index] = <Square color={color} />;
+  });
+
+  return squares;
+};
+
 const Tetris = () => {
   const width = 10;
 
@@ -95,20 +105,14 @@ const Tetris = () => {
     };
   }, [moveDown, moveLeft, moveRight, rotate]);
 
-  const Board = () => {
-    const squares = tetrisArray.map((tetris) => <Square />);
-    const color = getRandomItem(colors);
-    current[currentRotation].forEach((index) => {
-      squares[currentPosition + index] = <Square color={color} />;
-    });
-
-    return squares;
-  };
-
   return (
     <Container>
       <Grid>
-        <Board />
+        <Board
+          current={current}
+          currentPosition={currentPosition}
+          currentRotation={currentRotation}
+        />
       </Grid>
     </Container>
   );
